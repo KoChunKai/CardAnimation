@@ -6,6 +6,24 @@ CardAnimation is a animation like Tinder, LOVOO.
   - Left/Right Animation
   - Cancel Animation
   - Touch Animation
+  
+How to use?
+===================
+1. new CardAnimation(Activity, CardAnimListener, Container)
+    ```
+    CardAnimation animation = new CardAnimation(MainActivity.this, cardAnimListener, rl_container);
+    ```
+
+2. FirstLoading(Cards in Queue )
+    ```
+    Queue<View> card = new LinkedList<>();
+    animation.FirstLoading(card);
+    ```
+
+3. And set OnClickListener or OnTouchListener at Card. 
+
+4. Then you can use clickCard() cancelCard() goCard() to display Card animation.
+
 
 # License
 
