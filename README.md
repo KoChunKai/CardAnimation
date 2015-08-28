@@ -22,7 +22,7 @@ How to use?
 
 3. And set OnClickListener or OnTouchListener at Card. 
 
-4. Then you can use clickCard() cancelCard() goCard() to display Card animation.
+4. Then you can use ```alreadyCard()``` ```clickCard()```  ```cancelCard()```  ```goCard()``` to display Card animation.
 
 
 # License
