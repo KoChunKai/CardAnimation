@@ -51,15 +51,17 @@ public class CardAnimation {
                         if (queue.size() > 0) {
                             View view = (View) queue.poll();
                             container.addView(view);
-                            ObjectAnimator o1, o2, o3, o4;
+                            ObjectAnimator o1, o2, o3, o4, o5;
                             o1 = ObjectAnimator.ofFloat(view, "scaleX", 0.7f, 0.9f);
                             o2 = ObjectAnimator.ofFloat(view, "scaleY", 0.7f, 0.9f);
                             o3 = ObjectAnimator.ofFloat(view, "alpha", 0.0f, 1.0f);
                             //載入動畫 放大
                             if (queue.size() % 2 == 0) {
                                 o4 = ObjectAnimator.ofFloat(view, "rotation", -10, 0);
+                                o5 = ObjectAnimator.ofFloat(view, "TranslationX", -1000.0f, 0.0f);
                             } else {
                                 o4 = ObjectAnimator.ofFloat(view, "rotation", 10, 0);
+                                o5 = ObjectAnimator.ofFloat(view, "TranslationX", 1000.0f, 0.0f);
                             }
                             //載入動畫 旋轉
                             AnimatorSet set = new AnimatorSet();
@@ -71,7 +73,7 @@ public class CardAnimation {
                             }
                             set.setDuration(1000);
                             //載入動畫 一張的時間
-                            set.playTogether(o1, o2, o3, o4);
+                            set.playTogether(o1, o2, o3, o4,o5);
                             set.start();
                         } else {
                             cancel();
@@ -79,7 +81,7 @@ public class CardAnimation {
                     }
                 });
             }
-        }, 0, 200);
+        }, 0, 300);
         //載入動畫 接續時間
     }
 
@@ -112,7 +114,7 @@ public class CardAnimation {
         return set;
     }
 
-    void clickCard(View topLayer){
+    public void clickCard(View topLayer){
         //卡片按下動畫
         ObjectAnimator top_o1 = ObjectAnimator.ofFloat(topLayer,"scaleX", 1.0f, 0.95f);
         ObjectAnimator top_o2 = ObjectAnimator.ofFloat(topLayer,"scaleY", 1.0f, 0.95f);
@@ -122,7 +124,7 @@ public class CardAnimation {
         set.start();
     }
 
-    void cancelCard(View topLayer,View bottomLayer){
+    public void cancelCard(View topLayer,View bottomLayer){
         //卡片放開動畫
         AnimatorSet set = new AnimatorSet();
         set.setDuration(1000);
@@ -142,7 +144,7 @@ public class CardAnimation {
         set.start();
     }
 
-    void goCard(View topLayer, View bottomLayer,float X){
+    public void goCard(View topLayer, View bottomLayer,float X){
         //卡片滑出去動畫
         AnimatorSet set = new AnimatorSet();
         set.setDuration(350);
