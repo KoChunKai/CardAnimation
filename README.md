@@ -1,7 +1,7 @@
 # CardAnimation
 >Android Custom Library Animation
 
-CardAnimation is a animation like Tinder, LOVOO.
+CardAnimation is an animation like Tinder, LOVOO.
   - Start Animation
   - Left/Right Animation
   - Cancel Animation
