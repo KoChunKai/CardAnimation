@@ -9,7 +9,7 @@ CardAnimation is an animation like Tinder, LOVOO.
 
 Demo
 ===================
-![demo](Demo/demo.gif)
+![Demo](/demo/demo.gif)
   
 How to use?
 ===================
