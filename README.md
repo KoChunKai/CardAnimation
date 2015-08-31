@@ -7,9 +7,6 @@ CardAnimation is an animation like Tinder, LOVOO.
   - Cancel Animation
   - Touch Animation
 
-Demo
-===================
-![Demo](/demo/demo.gif)
   
 How to use?
 ===================
